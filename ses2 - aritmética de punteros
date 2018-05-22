@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    //AritmC)tica de apuntadores
+    
+    float var=3.14;
+    float var1=14.1;
+    
+    float * ptr;
+    ptr=NULL; //utilizado para inicializar apuntadores
+    
+    printf("DirecciC3n(var): %p\n", &var);
+    printf("DirecciC3n(var): %f \n", var);
+    //DirecciC3n(var): 0x7ffd74d8e0fc                                                                                                                                                                                                        
+    //DirecciC3n(var): 3.140000    
+    
+    printf("DirecciC3n(var): %p\n", &var1);
+    printf("DirecciC3n(var): %f \n", var1);
+    //DirecciC3n(var): 0x7ffc87c5cc4c                                                                                                                                                                                                       
+    //DirecciC3n(var): 14.100000
+    
+    ptr=&var;
+    printf("*apuntador: %f\n", *ptr);
+    //*apuntador: 3.140000
+    
+    ptr--;
+    printf("*apuntador--: %f\n", *ptr);
+    //*apuntador--: 0.000000 //error
+
+    short * ptr1;
+    short arr[]={1,2,3,4,5};
+    
+    ptr1=arr
+
+
+    return 0;
+}
