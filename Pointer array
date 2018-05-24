@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+ void inc(int * arr[], int n) //int*arr[]: arreglo de apuntadores 
+ {
+     for(int i=0; i<n; i++)
+     {
+         if(arr[i]!=NULL)
+            //*(arr[i])++;
+         printf("%p\n", &arr[i]);
+         //arr[i]++; //aumenta dirección en índice i
+
+     }
+}
+
+int main()
+{
+    int v=0, v1=1, v2=2, v3=3;
+    int * arr[10]={&v, &v1, &v2, &v3, NULL, &v1}; //arreglo de punteros, cada uno apunta a dirección v, v1...
+    inc(arr, 10);
+    
+    return 0;
+}
